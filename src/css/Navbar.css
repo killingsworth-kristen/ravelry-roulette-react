@@ -1,0 +1,39 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: middle;
+}
+
+h1 {
+    margin: 0;
+    font-size: 40px;
+    margin: 4px;
+}
+
+.nav-link-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.rav-link {
+    display: flex;
+    align-items: center;
+    margin-right: 6px;
+}
+
+.nav-button {
+    border: none;
+    background-color: var(--rav-dark-background);
+    color: antiquewhite;
+    margin: 0 6px;
+    font-size: 25px;
+
+}
+
+.nav-button:hover {
+    color: aqua;
+}
+
+.nav-button.active {
+    border-bottom: 2px solid aqua;
+}
