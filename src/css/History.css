@@ -1,0 +1,23 @@
+.big-text {
+    text-align: center;
+}
+
+.text-container {
+    display: flex;
+    justify-content: center;
+}
+
+.clear-btn {
+    border: none;
+    background-color: antiquewhite;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.clear-btn:hover {
+    border: 2px solid #ee6e62;
+    color: #ee6e62;
+    font-weight: 600;
+}

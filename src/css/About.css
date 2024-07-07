@@ -1,0 +1,12 @@
+.big-text {
+    text-align: center;
+}
+
+.about-container {
+    margin: 0 5%;
+}
+
+.youtube-frame {
+    display: flex;
+    justify-content: center;
+}

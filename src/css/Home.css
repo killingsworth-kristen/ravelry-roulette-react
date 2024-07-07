@@ -1,0 +1,49 @@
+.search-form {
+    margin: 0 auto;
+}
+
+.adv-opt-h4 {
+    margin-bottom: 0;
+}
+
+.advanced-options {
+    justify-content: left;
+}
+
+.advanced-options label {
+    margin-right: 8px;
+}
+
+.select-multi {
+    display: flex;
+}
+
+.submit-btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-btn-container h4 {
+    margin-bottom: 1rem;
+}
+
+.submit-btn {
+    background-color: inherit;
+    border: none;
+    width: 100px;
+    height: 100px;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    transform: scale(150%);
+    animation: spinner 1s linear infinite;
+ }
+ 
+ @keyframes spinner {
+    0% { transform: rotate(0deg);  }
+    100% { transform: rotate(360deg); }
+ }
+

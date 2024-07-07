@@ -5,8 +5,7 @@ import Navbar from './components/Navbar.js';
 import About from './pages/About.js';
 import Home from './pages/Home.js';
 import History from './pages/History.js';
-
-import RavelrySearch from "./Util.js";
+import Result from './pages/Result.js';
 
 function App() {
 
@@ -20,6 +19,8 @@ return (
           <Route path={'/'} element={<Home />} />
           <Route path={'/about'} element={<About />} />
           <Route path={'/history'} element={<History />} />
+          {/* Loading */}
+          <Route path={'/result'} element={<Result />}/>
         </Routes>
       </Router>
     </div>

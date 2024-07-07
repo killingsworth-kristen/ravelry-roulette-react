@@ -11,3 +11,7 @@ body {
   color: antiquewhite;
   background-color: var(--rav-dark-background);
 }
+
+.hidden {
+  display: none;
+}
