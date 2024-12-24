@@ -3,9 +3,11 @@ import { useState, useEffect } from "react";
 
 import "../css/History.css";
 
-export default function History () {
-    const [count, setCount] = useState(0);
+import HistoryCard from "../components/HistoryCard.js";
 
+export default function History ({title, link}) {
+    // const [count, setSpinCount] = useState(0);
+    const testArray = [{title: `test title 1`, link: 'link', thumb: 'thumbnail-link'},{title: `test title 3`, link: 'link', thumb: 'thumbnail-link'},{title: `test title 3`, link: 'link', thumb: 'thumbnail-link'}]
     useEffect(() => {
         // TODO: 
         // get results from local storage
@@ -21,12 +23,18 @@ export default function History () {
 
     return (
         <main>
-            <h2 className="big-text">You have spun the wheel: {count} times!</h2>
+            <h2 className="big-text">You have spun the wheel: {testArray.length} times!</h2>
 
             <div className="text-container">
                 <button className="clear-btn">Clear History</button>
+                
                 {/* map through local storage object */}
                 {/* TODO: Create history card/list/thing component */}
+            </div>
+            <div>
+                {testArray.map((history) => {
+                    return (<HistoryCard title={history.title} link={history.link} thumb={history.thumb}/>)
+                })}
             </div>
         </main>
     )

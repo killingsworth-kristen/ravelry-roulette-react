@@ -1,0 +1,59 @@
+.history-card {
+    display: flex;
+    margin: 1rem 5%;
+    background-color: #0c0e15;
+    border: none;
+    border-radius: 20px;
+}
+
+.history-card-text {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.pattern-thumb {
+    /* max-width: 300px;
+    max-height: 300px; */
+    min-width: 100px;
+    min-height: 100px;
+    margin: 1.5rem;
+    background-color: grey;
+}
+
+.pattern-name, .pattern-link-anchor {
+    margin: auto 2rem;
+}
+
+.pattern-link-anchor, .pattern-link-anchor:visited {
+    text-decoration: none;
+    color: aqua;
+}
+
+.pattern-link-anchor:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+    .history-card {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .history-card-text {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .pattern-thumb {
+        width: 100px;
+        height: 100px;
+        margin: 1.5rem auto 0 auto;
+    }
+
+    .pattern-name {
+        margin-top: 1rem;
+    }
+}

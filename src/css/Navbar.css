@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: middle;
+    margin: 1rem;
 }
 
 h1 {
@@ -12,13 +13,23 @@ h1 {
 
 .nav-link-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    background-color: var(--rav-dark-background);
 }
 
 .rav-link {
     display: flex;
     align-items: center;
     margin-right: 6px;
+}
+
+.rav-link img {
+    margin: 0 auto;
 }
 
 .nav-button {
@@ -35,5 +46,11 @@ h1 {
 }
 
 .nav-button.active {
-    border-bottom: 2px solid aqua;
+    border: none;
+    text-decoration: underline;
+    text-decoration-color: aqua;
+}
+
+.closed {
+    display: none;
 }
