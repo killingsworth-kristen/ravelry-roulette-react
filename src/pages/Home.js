@@ -8,6 +8,7 @@ export default function Home () {
 
     const [advOptHidden, setAdvOptHidden ] = useState(true);
     const [expandIcon, setExpandIcon ] = useState("+");
+    const [tempCount, setTempCount] = useState(1);
 
     const handleAdvOptHidden = () => {
         console.log("clicked")
@@ -36,6 +37,30 @@ export default function Home () {
           return json; 
         });
       };
+
+    // THIS IS A TEMPORARY FUNCTION TO BUILD/TEST HISTORY FUNCTIONALITY
+    const handleHistoryTest = () => {
+        let count = 1;
+        let historyArray = [];
+
+        if (localStorage.getItem("historyArray") !== null) {
+            count = JSON.parse(localStorage.getItem("historyArray")).length + 1;
+        }
+
+        const testObj = [{title: `test title ${count}`, link: 'link', thumb: 'thumbnail-link'}];
+
+        console.log(localStorage.getItem("historyArray"));
+
+        if (localStorage.getItem("historyArray") === null) {
+            historyArray = localStorage.setItem("historyArray", JSON.stringify(testObj));
+        } else {
+            historyArray = JSON.parse(localStorage.getItem("historyArray"));
+            historyArray = historyArray.concat(testObj);
+            console.log(historyArray);
+            localStorage.setItem("historyArray", JSON.stringify(historyArray));
+        }
+            
+    }
 
     return (
         <main>
@@ -70,9 +95,10 @@ export default function Home () {
                     </div> {/* advanced-options */}
 
                     <h4>Spin that wheel!</h4>
-                    <button className="submit-btn" onSubmit={handleRavSearch} style={{backgroundImage:`url(${wheel})`}}></button>
+                    {/* <button className="submit-btn" onSubmit={handleRavSearch} style={{backgroundImage:`url(${wheel})`}}></button> */}
                 </div> {/* submit-btn-container */}
             </form>
+                    <button className="submit-btn" onClick={handleHistoryTest} style={{backgroundImage:`url(${wheel})`}}></button>
         </main>
     )
 }

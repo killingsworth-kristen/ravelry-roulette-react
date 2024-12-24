@@ -5,35 +5,36 @@ import "../css/History.css";
 
 import HistoryCard from "../components/HistoryCard.js";
 
-export default function History ({title, link}) {
+export default function History () {
+
+    const [historyArray, setHistoryArray] = useState([]);
+
     // const [count, setSpinCount] = useState(0);
     const testArray = [{title: `test title 1`, link: 'link', thumb: 'thumbnail-link'},{title: `test title 3`, link: 'link', thumb: 'thumbnail-link'},{title: `test title 3`, link: 'link', thumb: 'thumbnail-link'}]
     useEffect(() => {
-        // TODO: 
-        // get results from local storage
-        // setState of count
-        // map through localStorage results and create history list
+        if (localStorage.getItem("historyArray") !== null) {
+            setHistoryArray(JSON.parse(localStorage.getItem("historyArray")));
+        }
     },[])
 
     const handleClearHistory = () => {
-        // TODO:
-        // clear local storage
-        // (optional) pop-up "are you sure? This action cannot be reversed"
+        localStorage.clear("historyArray");
+        setHistoryArray([]);
     }
 
     return (
         <main>
-            <h2 className="big-text">You have spun the wheel: {testArray.length} times!</h2>
+            <h2 className="big-text">You have spun the wheel: {historyArray.length} times!</h2>
 
             <div className="text-container">
-                <button className="clear-btn">Clear History</button>
+                <button className="clear-btn" onClick={handleClearHistory}>Clear History</button>
                 
                 {/* map through local storage object */}
                 {/* TODO: Create history card/list/thing component */}
             </div>
             <div>
-                {testArray.map((history) => {
-                    return (<HistoryCard title={history.title} link={history.link} thumb={history.thumb}/>)
+                {historyArray.map((history) => {
+                    return (<HistoryCard key={history.title} title={history.title} link={history.link} thumb={history.thumb}/>)
                 })}
             </div>
         </main>

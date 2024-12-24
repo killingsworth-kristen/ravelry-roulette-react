@@ -3,7 +3,6 @@ import "../css/HistoryCard.css"
 export default function HistoryCard ({title, link, thumb}) {
     // const title = `title #`;
     // const link = "https://ravelry.com";
-
     return (
         <div className="history-card">
             <img className="pattern-thumb" src={thumb == null ? "placeholder link" : thumb} />
