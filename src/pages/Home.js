@@ -27,6 +27,8 @@ export default function Home () {
         // This is the HTTP header that you need add in order to access api.ravelry.com with a read only API key
         // `btoa` will base 64 encode a string: https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding
         
+        // TODO: Add ENV file for local dev on this computer bc not in git as is proper
+        // TODO: send queryState to localStorage so that the same params can be used to run query again from result page
         headers.set('Authorization', 'Basic ' + btoa(process.env.REACT_APP_USERNAME + ":" + process.env.REACT_APP_PASSWORD));
         
         return fetch("https://api.ravelry.com/patterns/search.json", { method: 'GET', headers: headers }).then(function(response) {
@@ -58,8 +60,7 @@ export default function Home () {
             historyArray = historyArray.concat(testObj);
             console.log(historyArray);
             localStorage.setItem("historyArray", JSON.stringify(historyArray));
-        }
-            
+        }     
     }
 
     return (
@@ -95,6 +96,7 @@ export default function Home () {
                     </div> {/* advanced-options */}
 
                     <h4>Spin that wheel!</h4>
+                    {/* TODO: figure out how loading screens work for suspense purposes */}
                     {/* <button className="submit-btn" onSubmit={handleRavSearch} style={{backgroundImage:`url(${wheel})`}}></button> */}
                 </div> {/* submit-btn-container */}
             </form>

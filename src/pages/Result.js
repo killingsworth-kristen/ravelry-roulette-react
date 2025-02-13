@@ -1,5 +1,7 @@
 import "../css/Result.css";
 
+import Spinner from "../components/Spinner.js";
+
 export default function Result () {
     const resultObj = {
         name: "pattern-name",
@@ -66,9 +68,25 @@ export default function Result () {
         // yarn_weight_description	String		
     }
 
+    // TODO: Grab queryState from local storage and rerun query
+
     return (
-        <>
+        <div>
             <h2 className="big-text">You have landed on:</h2>
-        </>
+            {/* I could iframe rav link instead? */}
+            <h3 className="result-pattern-name">TITLE</h3>
+            <div className="result-pattern-thumb-container">
+                <img className="result-pattern-thumb"/>
+            </div>
+            <div className="result-pattern-link-container">
+                <a href="#" className="result-pattern-link"><h3>View on Ravelery</h3></a>
+            </div>
+            <div>
+                <h3>Spin Again!</h3>
+                <button>Use the same settings</button>
+                <button>I want to change my settings...</button>
+                {/* two buttons - use same params or select new parameters  */}
+            </div>
+        </div>
     )
 }

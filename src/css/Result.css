@@ -1,3 +1,31 @@
 .big-text {
     text-align: center;
 }
+
+.result-pattern-name {
+    font-size: 40px;
+    text-align: center;
+}
+
+.result-pattern-thumb-container {
+    display: flex;
+    justify-content: center;
+}
+
+.result-pattern-thumb {
+    width: 40vh;
+    height: 40vh;
+    background-color: gray;
+    margin-bottom: 1rem;
+}
+
+.result-pattern-link-container {
+    text-align: center;
+
+}
+
+.result-pattern-link {
+    text-decoration: none;
+    color: aqua;
+    margin: 1rem;
+}
