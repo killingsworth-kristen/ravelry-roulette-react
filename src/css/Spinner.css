@@ -1,12 +1,28 @@
-.loader {
-    margin: auto;
-    /* background-image: url("./images/rav-roulette-wheel.svg"); */
-    width: 200px;
-    height: 200px;
-    animation: spinner 1s linear infinite;
+.submit-btn-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 1rem;
+ }
+ 
+ .submit-btn-container h4 {
+   margin-bottom: 1rem;
+ }
+ 
+ .submit-btn {
+   background-color: inherit;
+   border: none;
+   width: 100px;
+   height: 100px;
+ }
+ 
+ .submit-btn:hover {
+   transform: scale(150%);
+   animation: spinner 1s linear infinite;
  }
  
  @keyframes spinner {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+   0% { transform: rotate(0deg);  }
+   100% { transform: rotate(360deg); }
  }

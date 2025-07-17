@@ -7,11 +7,41 @@
     justify-content: center;
 }
 
+#history-info {
+    position: absolute;
+    z-index: 100;
+    background-color: Var(--rav-dark-background);
+    margin: 2vw;
+    padding: 1rem;
+    border: 2px solid antiquewhite;
+
+}
+
+#history-info-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#close-history-info-btn {
+    background: none;
+    border: 2px solid antiquewhite;
+    padding: 4px;
+    border-radius: 5px;
+    height: fit-content;
+    color: antiquewhite;
+    font-weight: bold;
+}
+
+#close-history-info-btn:hover {
+    color: #ee6e62;
+}
+
 .clear-btn {
     border: none;
     background-color: antiquewhite;
+    color: var(--rav-dark-background);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     padding: 10px;
     border-radius: 10px;
 }

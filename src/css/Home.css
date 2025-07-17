@@ -18,32 +18,9 @@
     display: flex;
 }
 
-.submit-btn-container {
+.search-param-container {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
-
-.submit-btn-container h4 {
-    margin-bottom: 1rem;
-}
-
-.submit-btn {
-    background-color: inherit;
-    border: none;
-    width: 100px;
-    height: 100px;
-    margin-top: 1rem;
-}
-
-.submit-btn:hover {
-    transform: scale(150%);
-    animation: spinner 1s linear infinite;
- }
- 
- @keyframes spinner {
-    0% { transform: rotate(0deg);  }
-    100% { transform: rotate(360deg); }
- }
-

@@ -12,6 +12,19 @@ body {
   background-color: var(--rav-dark-background);
 }
 
+button {
+  background: none;
+  color: antiquewhite;
+  border: 2px solid antiquewhite;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.info-btn {
+  background: none;
+  border: none;
+}
+
 .hidden {
   display: none;
 }

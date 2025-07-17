@@ -1,0 +1,35 @@
+.chip {
+    background-color: antiquewhite;
+    color: var(--rav-dark-background);
+    font-weight: 600;
+    padding: 0.5rem;
+    border: 2px solid antiquewhite;
+    border-radius: 5px;
+    display: flex;
+}
+
+.chip-text {
+    margin: 0;
+}
+
+.delete-chip-btn, .required-chip-btn  {
+    color: var(--rav-dark-background);
+    padding: 0;
+    padding-left: 0.5rem;
+}
+
+.delete-chip-btn:hover, .required-chip-btn:hover {
+    color: #ee6e62;
+}
+
+.required-options {
+    background-color: antiquewhite;
+    color: var(--rav-dark-background);
+    margin: .5rem;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.required-options > p:hover {
+    color: #ee6e62;
+}

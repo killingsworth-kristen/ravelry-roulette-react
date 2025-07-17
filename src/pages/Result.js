@@ -76,15 +76,15 @@ export default function Result () {
             {/* I could iframe rav link instead? */}
             <h3 className="result-pattern-name">TITLE</h3>
             <div className="result-pattern-thumb-container">
-                <img className="result-pattern-thumb"/>
+                <img className="result-pattern-thumb" src="https://placehold.co/400x400"/>
             </div>
             <div className="result-pattern-link-container">
                 <a href="#" className="result-pattern-link"><h3>View on Ravelery</h3></a>
             </div>
-            <div>
+            <div id="spin-again-container">
                 <h3>Spin Again!</h3>
-                <button>Use the same settings</button>
-                <button>I want to change my settings...</button>
+                <Spinner/>
+                <a href="./"><button id="change-settings-btn">I want to change my settings...</button></a>
                 {/* two buttons - use same params or select new parameters  */}
             </div>
         </div>
