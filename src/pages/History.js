@@ -48,7 +48,7 @@ export default function History () {
             </div>
             <div>
                 {historyArray.map((history) => {
-                    return (<HistoryCard key={history.title} title={history.title} link={history.link} thumb={history.thumb}/>)
+                    return (<HistoryCard key={history.name} name={history.name} link={"https://www.ravelry.com/patterns/library/" + history.permalink} thumb={history.first_photo.small_url}/>)
                 })}
             </div>
            

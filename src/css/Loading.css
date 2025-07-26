@@ -1,0 +1,20 @@
+.loading-animation {
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-spinner {
+   background-color: inherit;
+   background-repeat: no-repeat;
+   border: none;
+   width: 200px;
+   height: 200px;
+   animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+   0% { transform: rotate(0deg);  }
+   100% { transform: rotate(360deg); }
+}

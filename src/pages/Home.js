@@ -1,18 +1,19 @@
-import React from "react";
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 import Chip from "../components/Chip.js";
+import Spinner from "../components/Spinner.js";
 import wheel from "../images/rav-roulette-wheel.svg";
 import "../css/Home.css";
 
-export default function Home () {
+export default function Home ({queryState, setQueryState}) {
+    const navigate = useNavigate();
 
     const [advOptHidden, setAdvOptHidden ] = useState(true);
     const [expandIcon, setExpandIcon ] = useState("+");
     const [tempCount, setTempCount] = useState(1);
 
     const handleAdvOptHidden = () => {
-        console.log("clicked")
         if (advOptHidden === true) {
             setExpandIcon(<code>&#8212;</code>);
             setAdvOptHidden(false);
@@ -22,51 +23,9 @@ export default function Home () {
         }
     }
 
-    const handleRavSearch = () => {
-        const headers = new Headers();
-        // const debugFunction = this.debugFunction;
-        // This is the HTTP header that you need add in order to access api.ravelry.com with a read only API key
-        // `btoa` will base 64 encode a string: https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding
-        
-        // TODO: send queryState to localStorage so that the same params can be used to run query again from result page
-        headers.set('Authorization', 'Basic ' + btoa(process.env.REACT_APP_USERNAME + ":" + process.env.REACT_APP_PASSWORD));
-        
-        return fetch("https://api.ravelry.com/patterns/search.json", { method: 'GET', headers: headers }).then(function(response) {
-          return response.json();
-        }).then(function(json) { 
-            console.log(json);
-          // if (debugFunction) debugFunction(json);
-          return json; 
-        });
-      };
-
-    // THIS IS A TEMPORARY FUNCTION TO BUILD/TEST HISTORY FUNCTIONALITY
-    const handleHistoryTest = () => {
-        let count = 1;
-        let historyArray = [];
-
-        if (localStorage.getItem("historyArray") !== null) {
-            count = JSON.parse(localStorage.getItem("historyArray")).length + 1;
-        }
-
-        const testObj = [{title: `test title ${count}`, link: 'https://ravelry.com', thumb: 'https://placehold.co/400x400'}];
-
-        console.log(localStorage.getItem("historyArray"));
-
-        if (localStorage.getItem("historyArray") === null) {
-            historyArray = localStorage.setItem("historyArray", JSON.stringify(testObj));
-        } else {
-            historyArray = JSON.parse(localStorage.getItem("historyArray"));
-            historyArray = historyArray.concat(testObj);
-            console.log(historyArray);
-            localStorage.setItem("historyArray", JSON.stringify(historyArray));
-        }     
-    }
-
     return (
-        <main>
-            
-            <div className="search-param-container">
+        <main>   
+            {/* <div className="search-param-container">
                 <h3>Parameters</h3>
                 <div className="chip-container">
                     <Chip text='DEFAULT: Sort by="Hot Right Now"' required={true} field="sort"/>
@@ -100,16 +59,14 @@ export default function Home () {
 
                         <label htmlfor="photos">Must have photos!</label>
                         <input type="checkbox" id="photos" name="photos"></input><br/>
-                    </div> {/* advanced-options */}
-
-                   
-                    {/* TODO: figure out how loading screens work for suspense purposes */}
-                    {/* <button className="submit-btn" onSubmit={handleRavSearch} style={{backgroundImage:`url(${wheel})`}}></button> */}
-                </div> {/* submit-btn-container */}
-            </form>
+                    </div>
+                    TODO: figure out how loading screens work for suspense purposes
+                </div>
+            </form> */}
             <div className="submit-btn-container">
                 <h4>Spin that wheel!</h4>
-                <button className="submit-btn" onClick={handleRavSearch} style={{backgroundImage:`url(${wheel})`}}></button>
+                <Spinner />
+                {/* <button className="submit-btn" onClick={handleRavSearch} style={{backgroundImage:`url(${wheel})`}}></button> */}
             </div>
         </main>
     )

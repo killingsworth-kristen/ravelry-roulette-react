@@ -1,0 +1,124 @@
+[
+    {"sort": [
+        {
+            "param_id": "recently-popular",
+            "chip_text": "DEFAULT: Sort by='Hot Right Now'",
+            "default": true
+        },
+        {
+            "param_id": "created",
+            "chip_text": "Sort by='New to Ravelry'",
+            "default": false
+        },
+        {
+            "param_id": "name",
+            "chip_text": "Sort by='Name (A-Z)'",
+            "default": false
+        },
+        {
+            "param_id": "randomize",
+            "chip_text": "Sort by='Random'",
+            "default": false
+        },
+        {
+            "param_id": "popularity",
+            "chip_text": "Sort by='Most Popular'",
+            "default": false
+        },
+        {
+            "param_id": "projects",
+            "chip_text": "Sort by='Most Projects'",
+            "default": false
+        },
+        {
+            "param_id": "favorites",
+            "chip_text": "Sort by='Most Favorites'",
+            "default": false
+        },
+        {
+            "param_id": "queues",
+            "chip_text": "Sort by='Most Queued'",
+            "default": false
+        },
+        {
+            "param_id": "date",
+            "chip_text": "Sort by='Publication Date'",
+            "default": false
+        },
+        {
+            "param_id": "rating",
+            "chip_text": ">Sort by='Rating'",
+            "default": false
+        },
+        {
+            "param_id": "difficulty",
+            "chip_text": "Sort by='Difficulty'",
+            "default": false
+        },
+        {
+            "param_id": "yarn",
+            "chip_text": "Sort by='Yarn Required'",
+            "default": false
+        },
+        {
+            "param_id": "best",
+            "chip_text": "Sort by='Best Match'",
+            "default": false
+        } 
+    ],
+    "required": true
+    },
+    {"craft": [
+        {
+            "param_id": "crochet",
+            "chip_text": "craft='Crochet'",
+            "default": false
+        },
+        {
+            "param_id": "knitting",
+            "chip_text": "craft='Knitting'",
+            "default": false
+        },
+        {
+            "param_id": "machine-knitting",
+            "chip_text": "craft='Machine Knitting'",
+            "default": false
+        },
+        {
+            "param_id": "loom-knitting",
+            "chip_text": "craft='Loom Knitting'",
+            "default": false
+        }
+    ],
+    "required": false
+    },
+    {"availability": [
+        {
+            "param_id": "free",
+            "chip_text": "Availability='Free'",
+            "default": false
+        },
+        {
+            "param_id": "online",
+            "chip_text": "Availability='Purchase Online'",
+            "default": false
+        },
+        {
+            "param_id": "inprint",
+            "chip_text": "Availability='Purchase in Print'",
+            "default": false
+        },
+        {
+            "param_id": "ravelry",
+            "chip_text": "Availability='Ravelry Download'",
+            "default": false
+        },
+        {
+            "param_id": "discontinued",
+            "chip_text": "Availability='Discontinued'",
+            "default": false
+        }
+    ],
+    "required": false
+    }
+]
