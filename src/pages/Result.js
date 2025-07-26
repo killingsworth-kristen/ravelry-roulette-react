@@ -1,7 +1,6 @@
 // import { useEffect, useState } from "react";
 
 import "../css/Result.css";
-import wheel from "../images/rav-roulette-wheel.svg";
 
 import Spinner from "../components/Spinner.js";
 
@@ -21,7 +20,7 @@ export default function Result () {
                 <a href={"https://www.ravelry.com/patterns/library/" + result.permalink} target="_blank" rel="noopener noreferrer" className="result-pattern-link"><h3>View on Ravelery</h3></a>
             </div>
             <div className="result-pattern-thumb-container">
-                <img className="result-pattern-thumb" src={result.first_photo.medium_url}/>
+                <img className="result-pattern-thumb" src={result.first_photo.medium_url} alt="thumbnail imported from Ravelry; description not available"/>
             </div>
            
             <div id="spin-again-container">

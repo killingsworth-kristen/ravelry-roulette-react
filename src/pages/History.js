@@ -4,14 +4,11 @@ import { useState, useEffect } from "react";
 import "../css/History.css";
 
 import HistoryCard from "../components/HistoryCard.js";
-import { DisplaySettings } from "@mui/icons-material";
 
 export default function History () {
 
     const [historyArray, setHistoryArray] = useState([]);
 
-    // const [count, setSpinCount] = useState(0);
-    const testArray = [{title: `test title 1`, link: 'link', thumb: 'thumbnail-link'},{title: `test title 3`, link: 'link', thumb: 'thumbnail-link'},{title: `test title 3`, link: 'link', thumb: 'thumbnail-link'}]
     useEffect(() => {
         if (localStorage.getItem("historyArray") !== null) {
             setHistoryArray(JSON.parse(localStorage.getItem("historyArray")));
@@ -34,10 +31,7 @@ export default function History () {
 
             <div className="text-container">
                 <button className="clear-btn" onClick={handleClearHistory}>Clear History</button>
-                <button className="info-btn" onClick={handleHistoryInfo}><img alt="inforomation" src="/images/help_icon.svg"/></button>
-                
-                {/* map through local storage object */}
-                {/* TODO: Create history card/list/thing component */}
+                <button className="info-btn" onClick={handleHistoryInfo}><img alt="information" src="/images/help_icon.svg" /></button>
             </div>
             <div id="history-info" className="hidden"> 
                 <div id="history-info-header">

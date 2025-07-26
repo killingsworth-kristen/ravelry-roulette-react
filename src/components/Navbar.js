@@ -57,7 +57,7 @@ export default function Navbar () {
                 <button className='open-hamburger' onClick={handleOpenNav}> NAV </button>
                 <div className='nav-link-container closed'>
                     <button className={'close-hamburger closed'} onClick={handleOpenNav}> X </button>
-                    <a href='https://www.ravelry.com' target='_blank' className='rav-link'>
+                    <a href='https://www.ravelry.com' target='_blank' rel="noreferrer noopener" className='rav-link'>
                         <img src='./images/ravelry-logo.svg' alt='link to Ravelry'></img>
                     </a>
                     <button className={currentPath !== "/" ? "nav-button" : "nav-button active"} onClick={handleNavRoute} id='home'>Home</button>

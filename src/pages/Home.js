@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 
 import Chip from "../components/Chip.js";
 import Spinner from "../components/Spinner.js";
-import wheel from "../images/rav-roulette-wheel.svg";
 import "../css/Home.css";
 
 export default function Home ({queryState, setQueryState}) {
