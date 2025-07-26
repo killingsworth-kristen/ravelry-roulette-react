@@ -1,6 +1,5 @@
 {
   "name": "ravelry-roulette-react",
-  "homepage": "https://killingsworth-kristen.github.io/ravelry-roulette",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
